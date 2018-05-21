@@ -61,7 +61,7 @@ Note:
 @title[What is Capsule Update Video]
 
 
-![video](https://www.youtube.com/edit?o=U&video_id=_4P2RQMSu6c)
+![video](https://www.youtube.com/watch?v=_4P2RQMSu6c&feature=youtu.be)
 
 Note:
 
@@ -85,12 +85,12 @@ When the UEFI Shell application, CapsuleAPP,  is invoked with a .CAP file image,
 <span style="font-size:0.9em" >Establish a <font color="yellow"> <b>Root-of-Trust</b></font> at the low-level platform initialization</span> <br>
 <span style="font-size:0.8em" >National Institute of Standards and Technology (NIST) provides guidelines on BIOS update, 
 <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">[800-147]  </a></span><br>
-- <span style="font-size:0.7em" >BIOS Update Authentication</span>
-- <span style="font-size:0.7em" >Secure Local Update Method </span>
-- <span style="font-size:0.7em" >Integrity Protection</span>
-- <span style="font-size:0.7em" >Non-Bypassabilitiy </span>
-<br>
-<br>
+<ul>
+- <span style="font-size:0.6em" >BIOS Update Authentication</span>
+- <span style="font-size:0.6em" >Secure Local Update Method </span>
+- <span style="font-size:0.6em" >Integrity Protection</span>
+- <span style="font-size:0.6em" >Non-Bypassabilitiy </span>
+</ul>
 <br>
 <br>
 <br>
@@ -117,15 +117,16 @@ This scenario assumes the factory-provisioned firmware and subsequent updates ar
 <span style="font-size:0.9em" >Establish a <font color="yellow"> <b>Root-of-Trust</b></font> at the low-level platform initialization</span> <br>
 <span style="font-size:0.8em" >National Institute of Standards and Technology (NIST) provides guidelines on BIOS update, 
 <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">[800-147]  </a></span><br>
-- <span style="font-size:0.7em" >BIOS Update Authentication</span>
-- <span style="font-size:0.7em" >Secure Local Update Method </span>
-- <span style="font-size:0.7em" >Integrity Protection</span>
-- <span style="font-size:0.7em" >Non-Bypassabilitiy </span>
+<ul>
+- <span style="font-size:0.6em" >BIOS Update Authentication</span>
+- <span style="font-size:0.6em" >Secure Local Update Method </span>
+- <span style="font-size:0.6em" >Integrity Protection</span>
+- <span style="font-size:0.6em" >Non-Bypassabilitiy </span>
+</ul>
 <br>
 <br>
 <br>
-<br>
-<br>
+<span style="font-size:0.9em" >Does not describe implementation – the    </span>
 <p align="right"><span style="font-size:0.5em"  >NIST:  <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">SP 800-147 .pdf</a></span></p>
 
 Note:
@@ -153,7 +154,7 @@ This scenario assumes the factory-provisioned firmware and subsequent updates ar
        <ul>
            <li><span style="font-size:0.8em" >Capsule model for binary delivery</span></li>
            <li><span style="font-size:0.8em" >Bus / Device Enumeration </span></li>
-           <li><span style="font-size:0.8em" >Managing updates via: <br>EFI System Resoure Table, Firmware Management Protocol (FMP) and  Capsule Signing </span></li>
+           <li><span style="font-size:0.8em" >Managing updates via: <br></span><span style="font-size:0.6em" >EFI System Resoure Table, Firmware Management Protocol (FMP) and<br>  Capsule Signing </span></li>
        </ul>
 </div>
 <div class="right1">
@@ -178,10 +179,10 @@ Note:
 <br>
 <p align="right"><span class="gold" >UEFI Spec defines Capsule Services to meet NIST Requirements</span></p>
 
-- <span style="font-size:0.8em">&nbsp;&nbsp;<b>EFI_FIRMWARE_MANAGEMENT_PROTOCOL</b>, (FMP) capsule format</span> |
-- <span style="font-size:0.8em">&nbsp;&nbsp;<b>EFI System Resource Table</b> (ESRT) to support system firmware and device firmware update </span> |
-- <span style="font-size:0.8em">&nbsp;&nbsp;An OS agent may call the UEFI service `UpdateCapsule()` to pass the capsule image from the OS to the firmware. Based upon the capsule flags, the 
-firmware may process the capsule image immediately, or the firmware may reset the system and process the capsule image on the next boot </span> 
+- <span style="font-size:0.8em"><b>EFI_FIRMWARE_MANAGEMENT_PROTOCOL</b>, (FMP) capsule format</span> |
+- <span style="font-size:0.8em"><b>EFI System Resource Table</b> (ESRT) to support system firmware and device firmware update </span> |
+- <span style="font-size:0.8em">An OS agent may call the UEFI service `UpdateCapsule()` to pass the capsule image from the OS to the firmware. Based upon the capsule flags, the 
+firmware may process the capsule image immediately, or the firmware may reset the system and process the capsule image on the next boot </span> |
 
 Note:
 
@@ -329,8 +330,8 @@ UEFI open platforms_Vincent.ppt slide 24  - CanSecWest 2015 -  Refrences [6]: re
 ---?image=assets/images/binary-strings-black2.jpg
 @title[How to Enable Capsule Update Section]
 <br><br><br><br><br>
-### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to Enable</span>
-<span style="font-size:0.9em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to Enable Capsule Update on a  EDK II Platform</span>
+### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to Enable?</span>
+<span style="font-size:0.9em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to Enable Capsule Update on a  EDK II Platform?</span>
 
 
 ---?image=/assets/images/slides/Slide25.JPG
@@ -338,7 +339,7 @@ UEFI open platforms_Vincent.ppt slide 24  - CanSecWest 2015 -  Refrences [6]: re
 @title[UEFI Capsule Implementation in EDK II]
 <p align="right"><span class="gold" >UEFI Capsule Implementation in EDK II</span></p>
 <br>
-<span style="font-size:0.9em" ><a href=""> </a> Uses <a href=""> </a>to sign and authenticate firmware update capsules and firmware recovery images
+<span style="font-size:0.9em" ><a href="https://github.com/tianocore/edk2/tree/master/SignedCapsulePkg">SignedCapsulePkg </a> Uses <a href="https://www.openssl.org/"> OpenSSL</a>to sign and authenticate firmware update capsules and firmware recovery images
 </span>
 
 Note:
@@ -356,7 +357,7 @@ Note:
 @title[UEFI Capsule Implementation in EDK II]
 <p align="right"><span class="gold" >UEFI Capsule Implementation in EDK II</span></p>
 <br>
-<span style="font-size:0.9em" ><a href=""> </a> Uses <a href=""> </a>to sign and authenticate firmware update capsules and firmware recovery images
+<span style="font-size:0.9em" ><a href="https://github.com/tianocore/edk2/tree/master/SignedCapsulePkg">SignedCapsulePkg </a> Uses <a href="https://www.openssl.org/"> OpenSSL</a>to sign and authenticate firmware update capsules and firmware recovery images
 </span>
 
 Note:
@@ -375,12 +376,12 @@ Note:
 <span style="font-size:0.9em" >The following wiki pages provide details on how to add the system firmware update using Signed UEFI Capsules </span>
 <br>
 - <span style="font-size:0.8em" >Implement Platform Components for UEFI Capsule : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Implementation">link</a> </span>
-- <span style="font-size:0.8em" > : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-DSC-FDF">link</a></span>
-- <span style="font-size:0.8em" >Verify 'CAPSULE ENABLE` feature using Test Signing Keys : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Verify-Test-Keys">link</a></span>
+- <span style="font-size:0.8em" >Add <font face="Courier New">CAPSULE_ENABLE</font> feature to Platform DSC/FDF Files : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-DSC-FDF">link</a></span>
+- <span style="font-size:0.8em" >Verify <font face="Courier New">CAPSULE_ENABLE</font> feature using Test Signing Keys : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Verify-Test-Keys">link</a></span>
 - <span style="font-size:0.8em" >Change System Firmware Update Version : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Change-System-Firmware-Update-Version">link</a></span>
-- <span style="font-size:0.8em" >Change `ESRT` System Firmware Update GUID : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Change-ESRT-System-Firmware-Update-GUID">link</a></span>
+- <span style="font-size:0.8em" >Change <font face="Courier New">ESRT</font> System Firmware Update GUID : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Change-ESRT-System-Firmware-Update-GUID">link</a></span>
 - <span style="font-size:0.8em" >How to Generate Signing Keys using OpenSSL Command Line Utilities : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Generate-Keys">link</a></span>
-- <span style="font-size:0.8em" >Verify 'CAPSULE ENABLE` feature using Generated Signing Keys : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Verify-Generated-Keys">link</a></span>
+- <span style="font-size:0.8em" >Verify <font face="Courier New">CAPSULE_ENABLE</font> feature using Generated Signing Keys : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Verify-Generated-Keys">link</a></span>
 
 
 Note:
@@ -504,17 +505,17 @@ The INI file is ASCII text. The first section is [Head]. The value of NumHeadU
 ---?image=/assets/images/slides/Slide34.JPG
 @title[Add CAPSULE_ENABLE feature ]
 <p align="right"><span class="gold" >Add `CAPSULE_ENABLE` feature to Platform DSC/FDF Files</span></p>
-<div class="left1">
+<div class="left2">
      <ul>
        <li><span style="font-size:0.8em" >Add `-D CAPSULE_ENABLE` to the build command line to enable capsule update features. </span></li>
        <li><span style="font-size:0.8em" >The build process generates a capsule update image (.cap file) along with the UEFI application `CapsuleApp.efi`. </span></li>
 	   <ul>
-           <li><span style="font-size:0.7em" >Copy .cap file and CapsuleApp.efi to USB thumb drive</span></li>
-           <li><span style="font-size:0.7em" >Boot to UEFI Shell and use CapsuleApp.efi with .cap signed capsule file</span></li>
+           <li><span style="font-size:0.7em" >Copy `.cap` file and `CapsuleApp.efi` to USB thumb drive</span></li>
+           <li><span style="font-size:0.7em" >Boot to UEFI Shell and use `CapsuleApp.efi` with `.cap` signed capsule file</span></li>
        </ul>
        <li><span style="font-size:0.8em" >Once the system is rebooted, the signed capsule is authenticated and the firmware is update with the new system firmware version. </span></li>
 </div>
-<div class="right1">
+<div class="right2">
    <p align="center"><span style="font-size:01.2em" ><font color="yellow"></font></span></p>
 </div>
 
@@ -540,13 +541,13 @@ Note:
 ---?image=/assets/images/slides/Slide36.JPG
 @title[Verify CAPSULE_ENABLE Feature  ]
 <p align="right"><span class="gold" >Verify `CAPSULE_ENABLE` Feature using Test Signing Keys</span></p>
-<div class="left1">
+<div class="left">
      <ul>
        <li><span style="font-size:0.8em" >Download the OpenSSL library</span></li>
        <li><span style="font-size:0.8em" >Build the Boot Firmware image with `CAPSULE_ENABLE`</span></li>
        <li><span style="font-size:0.8em" >Copy the `CapsuleApp.efi` to USB thumb drive and run on Target system</span></li>
 </div>
-<div class="right1">
+<div class="right">
    <p align="center"><span style="font-size:01.2em" ><font color="yellow"></font></span></p>
 </div>
 
@@ -558,6 +559,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide38.JPG
 @title[Verify Capsule Enable -P ]
+<br>
 <p align="right"><span class="gold" >Verify `CAPSULE_ENABLE`  with `CapsuleApp -P` option</span></p>
 
 Note:
@@ -565,6 +567,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide39.JPG
 @title[Verify Capsule Enable -E ]
+<br>
 <p align="right"><span class="gold" >Verify `CAPSULE_ENABLE`  with `CapsuleApp -E` option</span></p>
 
 Note:

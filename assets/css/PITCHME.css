@@ -133,6 +133,20 @@ span.aside {
     width: 45%;
 }
 
+
+.reveal div.left2 {
+    float: left;
+    z-index: -10;
+    width: 65%;
+}
+
+.reveal div.right2 {
+    float: right;
+    z-index: -10;
+    width: 35%;
+}
+
+
 .reveal a.pro-link {
     font-size: 0.5em;
 }
