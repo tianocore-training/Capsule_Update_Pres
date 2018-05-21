@@ -137,13 +137,13 @@ span.aside {
 .reveal div.left2 {
     float: left;
     z-index: -10;
-    width: 65%;
+    width: 70%;
 }
 
 .reveal div.right2 {
     float: right;
     z-index: -10;
-    width: 35%;
+    width: 30%;
 }
 
 

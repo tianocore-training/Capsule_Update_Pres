@@ -86,10 +86,10 @@ When the UEFI Shell application, CapsuleAPP,  is invoked with a .CAP file image,
 <span style="font-size:0.8em" >National Institute of Standards and Technology (NIST) provides guidelines on BIOS update, 
 <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">[800-147]  </a></span><br>
 <ul>
-- <span style="font-size:0.6em" >BIOS Update Authentication</span>
-- <span style="font-size:0.6em" >Secure Local Update Method </span>
-- <span style="font-size:0.6em" >Integrity Protection</span>
-- <span style="font-size:0.6em" >Non-Bypassabilitiy </span>
+ <li><span style="font-size:0.6em" >BIOS Update Authentication</span></li>
+<li><span style="font-size:0.6em" >Secure Local Update Method </span></li>
+<li><span style="font-size:0.6em" >Integrity Protection</span></li>
+<li><span style="font-size:0.6em" >Non-Bypassabilitiy </span></li>
 </ul>
 <br>
 <br>
@@ -181,8 +181,8 @@ Note:
 
 - <span style="font-size:0.8em"><b>EFI_FIRMWARE_MANAGEMENT_PROTOCOL</b>, (FMP) capsule format</span> |
 - <span style="font-size:0.8em"><b>EFI System Resource Table</b> (ESRT) to support system firmware and device firmware update </span> |
-- <span style="font-size:0.8em">An OS agent may call the UEFI service `UpdateCapsule()` to pass the capsule image from the OS to the firmware. Based upon the capsule flags, the 
-firmware may process the capsule image immediately, or the firmware may reset the system and process the capsule image on the next boot </span> |
+- <span style="font-size:0.8em">An OS agent may call the UEFI service `UpdateCapsule()` to pass the capsule image from the OS to the firmware. Based upon the capsule flags, the firmware may process the capsule image immediately, or the firmware may reset the system and process the capsule image on the next boot </span> |
+
 
 Note:
 
@@ -504,7 +504,7 @@ The INI file is ASCII text. The first section is [Head]. The value of NumHeadU
 
 ---?image=/assets/images/slides/Slide34.JPG
 @title[Add CAPSULE_ENABLE feature ]
-<p align="right"><span class="gold" >Add `CAPSULE_ENABLE` feature to Platform DSC/FDF Files</span></p>
+<p align="right"><span class="gold" >Add `CAPSULE_ENABLE` feature to Platform Files</span></p>
 <div class="left2">
      <ul>
        <li><span style="font-size:0.8em" >Add `-D CAPSULE_ENABLE` to the build command line to enable capsule update features. </span></li>
@@ -540,7 +540,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide36.JPG
 @title[Verify CAPSULE_ENABLE Feature  ]
-<p align="right"><span class="gold" >Verify `CAPSULE_ENABLE` Feature using Test Signing Keys</span></p>
+<p align="right"><span class="gold" >Verify `CAPSULE_ENABLE` Feature w/ Test Signing Keys</span></p>
 <div class="left">
      <ul>
        <li><span style="font-size:0.8em" >Download the OpenSSL library</span></li>
