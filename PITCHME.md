@@ -61,13 +61,15 @@ Note:
 @title[What is Capsule Update Video]
 
 
-![video](https://youtu.be/_4P2RQMSu6c)
+![video](https://www.youtube.com/edit?o=U&video_id=_4P2RQMSu6c)
 
 Note:
+
 Capsule Update is a MORE secure way to update the firmware using a firmware image where the capsule is a file that contains a firmware update image.<br>   
 A security benefit is that the capsule update method only works if the existing image on the target system has the same 
 signature as used with to build the original  Firmware image currently on the target system.<br> 
 When the Capsule update method is enabled, The EDK II Build will generate a firmware image in for form of a capsule or file.  The file will have a .CAP extension. <br> 
+
 
 The EDK II Build process will also create a UEFI Shell application called “CapsuleAPP.efi” that will use  the capsule file.  <br>
 When the Capsule update method is enabled,  the verification method can also be selected for how a firmware update image is verified, or authenticated, before it is used.  The verifications methods are NONE, Test or user generated.<br> 
@@ -80,14 +82,15 @@ When the UEFI Shell application, CapsuleAPP,  is invoked with a .CAP file image,
 <!-- .slide: data-transition="none" -->
 @title[Why Capsule Update Needed]
 <p align="right"><span class="gold" >Why is Capsule Update Needed?</span></p>
-<br>
 <span style="font-size:0.9em" >Establish a <font color="yellow"> <b>Root-of-Trust</b></font> at the low-level platform initialization</span> <br>
 <span style="font-size:0.8em" >National Institute of Standards and Technology (NIST) provides guidelines on BIOS update, 
-<a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">[800-147]  </a></span>
+<a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">[800-147]  </a></span><br>
 - <span style="font-size:0.7em" >BIOS Update Authentication</span>
 - <span style="font-size:0.7em" >Secure Local Update Method </span>
 - <span style="font-size:0.7em" >Integrity Protection</span>
 - <span style="font-size:0.7em" >Non-Bypassabilitiy </span>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -111,20 +114,19 @@ This scenario assumes the factory-provisioned firmware and subsequent updates ar
 <!-- .slide: data-transition="none" -->
 @title[Why Capsule Update Needed]
 <p align="right"><span class="gold" >Why is Capsule Update Needed?</span></p>
-<br>
 <span style="font-size:0.9em" >Establish a <font color="yellow"> <b>Root-of-Trust</b></font> at the low-level platform initialization</span> <br>
 <span style="font-size:0.8em" >National Institute of Standards and Technology (NIST) provides guidelines on BIOS update, 
-<a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">[800-147]  </a></span>
+<a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">[800-147]  </a></span><br>
 - <span style="font-size:0.7em" >BIOS Update Authentication</span>
 - <span style="font-size:0.7em" >Secure Local Update Method </span>
 - <span style="font-size:0.7em" >Integrity Protection</span>
 - <span style="font-size:0.7em" >Non-Bypassabilitiy </span>
 <br>
-<span style="font-size:0.9em" >Does not describe implementation – the    </span><br>
+<br>
+<br>
+<br>
 <br>
 <p align="right"><span style="font-size:0.5em"  >NIST:  <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">SP 800-147 .pdf</a></span></p>
-
-
 
 Note:
 
@@ -151,7 +153,7 @@ This scenario assumes the factory-provisioned firmware and subsequent updates ar
        <ul>
            <li><span style="font-size:0.8em" >Capsule model for binary delivery</span></li>
            <li><span style="font-size:0.8em" >Bus / Device Enumeration </span></li>
-           <li><span style="font-size:0.8em" >Managing updates via: EFI System Resoure Table, Firmware Management Protocol and  Capsule Signing </span></li>
+           <li><span style="font-size:0.8em" >Managing updates via: <br>EFI System Resoure Table, Firmware Management Protocol (FMP) and  Capsule Signing </span></li>
        </ul>
 </div>
 <div class="right1">
@@ -167,19 +169,19 @@ Note:
 ---?image=assets/images/binary-strings-black2.jpg
 @title[How does the Capsule Update work? Section]
 <br><br><br><br><br>
-### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How does the Capsule Update work?</span>
+### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How does Capsule Update work?</span>
 <span style="font-size:0.9em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 
 ---
 @title[UEFI Spec defines Capsule Services ]
-<p align="right"><span class="gold" >UEFI Spec defines Capsule Services to meet NIST Requirement</span></p>
 <br>
+<p align="right"><span class="gold" >UEFI Spec defines Capsule Services to meet NIST Requirements</span></p>
 
-@fa[circle gp-bullet-ltgreen]<span style="font-size:0.9em">&nbsp;&nbsp;<b>EFI_FIRMWARE_MANAGEMENT_PROTOCOL</b>, (FMP) capsule format</span> <br>
-@fa[circle gp-bullet-gold]<span style="font-size:0.9em">&nbsp;&nbsp;<b>EFI System Resource Table</b> (ESRT) to support system firmware and device firmware update </span> <br>
-@fa[circle gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;An OS agent may call the UEFI service `UpdateCapsule()` to pass the capsule image from the OS to the firmware. Based upon the capsule flags, the 
-firmware may process the capsule image immediately, or the firmware may reset the system and process the capsule image on the next boot </span> <br>
+- <span style="font-size:0.8em">&nbsp;&nbsp;<b>EFI_FIRMWARE_MANAGEMENT_PROTOCOL</b>, (FMP) capsule format</span> |
+- <span style="font-size:0.8em">&nbsp;&nbsp;<b>EFI System Resource Table</b> (ESRT) to support system firmware and device firmware update </span> |
+- <span style="font-size:0.8em">&nbsp;&nbsp;An OS agent may call the UEFI service `UpdateCapsule()` to pass the capsule image from the OS to the firmware. Based upon the capsule flags, the 
+firmware may process the capsule image immediately, or the firmware may reset the system and process the capsule image on the next boot </span> 
 
 Note:
 
@@ -220,7 +222,7 @@ An OS agent may call the UEFI service UpdateCapsule() to pass the capsule image 
 ---?image=/assets/images/slides/Slide14.JPG
 <!-- .slide: data-transition="none" -->
 @title[Capsule Update - flow ]
-<p align="right"><span class="gold" >Capsule Update - flow </span></p>
+#### <p align="right"><span class="gold" >Capsule Update - flow </span></p>
 
 
 Note:
@@ -236,7 +238,7 @@ EDKII provides the sample drivers to performance the signed system firmware upda
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Capsule Update - flow 02]
-<p align="right"><span class="gold" >Capsule Update - flow </span></p>
+#### <p align="right"><span class="gold" >Capsule Update - flow </span></p>
 
 
 Note:
@@ -254,7 +256,7 @@ EDKII provides the sample drivers to performance the signed system firmware upda
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Capsule Update - flow 03]
-<p align="right"><span class="gold" >Capsule Update - flow </span></p>
+#### <p align="right"><span class="gold" >Capsule Update - flow </span></p>
 
 
 Note:
@@ -304,6 +306,8 @@ UEFI open platforms_Vincent.ppt slide 24  - CanSecWest 2015 -  Refrences [6]: re
 - Reading / updating firmware
 - Integrity checks
 
+
+
 ---?image=/assets/images/slides/Slide22.JPG
 @title[Firmware Update Rollback Protection]
 <p align="right"><span class="gold" >Firmware Update Rollback Protection</span></p>
@@ -315,6 +319,11 @@ Note:
 Source:
 https://firmware.intel.com/blog/security-technologies-and-minnowboard-max?page=1 
 UEFI open platforms_Vincent.ppt slide 24  - CanSecWest 2015 -  Refrences [6]: reference # [6] Slide 26 of PPT
+
+
+1. Each version fixes some issues with the previous. Since none are known to have security flaws, each new version allows updates to all older versions.
+2. In V4, one of the issues fixed in V3 is realized to be a security fix.  V4 will not allow updates to earlier versions, even V3 since it allows update to V2.
+3. Version 5 can now accept only versions 5 and 4.
 
 
 ---?image=assets/images/binary-strings-black2.jpg
@@ -365,20 +374,13 @@ Note:
 <br>
 <span style="font-size:0.9em" >The following wiki pages provide details on how to add the system firmware update using Signed UEFI Capsules </span>
 <br>
-- <span style="font-size:0.8em" ><a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Implementation">Implement 
-	Platform Components for UEFI Capsule</a> </span>
-- <span style="font-size:0.8em" ><a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-DSC-FDF">Add 'CAPSULE ENABLE` feature 
-	to Platform DSC/FDF Files</a></span>
-- <span style="font-size:0.8em" ><a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Verify-Test-Keys">Verify 'CAPSULE ENABLE` feature 
-	using Test Signing Keys</a></span>
-- <span style="font-size:0.8em" ><a href="https://github.com/tianocore/tianocore.github.io/wiki/Change-System-Firmware-Update-Version">Change 
-	System Firmware Update Version</a></span>
-- <span style="font-size:0.8em" ><a href="https://github.com/tianocore/tianocore.github.io/wiki/Change-ESRT-System-Firmware-Update-GUID">Change 
-	`ESRT` System Firmware Update GUID</a></span
-- <span style="font-size:0.8em" ><a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Generate-Keys">How 
-	to Generate Signing Keys using OpenSSL Command Line Utilities</a></span>
-- <span style="font-size:0.8em" ><a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Verify-Generated-Keys">Verify 'CAPSULE ENABLE` feature 
-	using Generated Signing Keys</a></span>
+- <span style="font-size:0.8em" >Implement Platform Components for UEFI Capsule : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Implementation">link</a> </span>
+- <span style="font-size:0.8em" > : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-DSC-FDF">link</a></span>
+- <span style="font-size:0.8em" >Verify 'CAPSULE ENABLE` feature using Test Signing Keys : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Verify-Test-Keys">link</a></span>
+- <span style="font-size:0.8em" >Change System Firmware Update Version : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Change-System-Firmware-Update-Version">link</a></span>
+- <span style="font-size:0.8em" >Change `ESRT` System Firmware Update GUID : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Change-ESRT-System-Firmware-Update-GUID">link</a></span>
+- <span style="font-size:0.8em" >How to Generate Signing Keys using OpenSSL Command Line Utilities : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Generate-Keys">link</a></span>
+- <span style="font-size:0.8em" >Verify 'CAPSULE ENABLE` feature using Generated Signing Keys : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Verify-Generated-Keys">link</a></span>
 
 
 Note:
@@ -390,6 +392,9 @@ Same as slide
 <!-- .slide: data-transition="none" -->
 @title[Implement Platform Components for UEFI Capsule]
 <p align="right"><span class="gold" >Implement Platform Components for UEFI Capsule</span></p>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -423,6 +428,9 @@ The INI file is ASCII text. The first section is [Head]. The value of NumHeadU
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 <p align="right"><span style="font-size:0.6em" >Example from Minnowboard Max/Turbot platform: <a href="https://github.com/tianocore/edk2-platforms/tree/devel-MinnowBoardMax-UDK2017/Vlv2TbltDevicePkg/Feature/Capsule">github link</a></span></p>
 
 Note:
@@ -448,6 +456,9 @@ The INI file is ASCII text. The first section is [Head]. The value of NumHeadU
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 <p align="right"><span style="font-size:0.6em" >Example from Minnowboard Max/Turbot platform: <a href="https://github.com/tianocore/edk2-platforms/tree/devel-MinnowBoardMax-UDK2017/Vlv2TbltDevicePkg/Feature/Capsule">github link</a></span></p>
 
 Note:
@@ -467,6 +478,9 @@ The INI file is ASCII text. The first section is [Head]. The value of NumHeadU
 <!-- .slide: data-transition="none" -->
 @title[Implement Platform Components for UEFI Capsule 04]
 <p align="right"><span class="gold" >Implement Platform Components for UEFI Capsule</span></p>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
