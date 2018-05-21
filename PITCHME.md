@@ -60,7 +60,8 @@ Note:
 ---
 @title[What is Capsule Update Video]
 
-![video](https://youtu.be/_4P2RQMSu6c)
+![video](https://github.com/Laurie0131/Capsule_Update_pres/blob/master/assets/video/CapsuleUpd.mp4?raw=true)
+
 
 Note:
 
