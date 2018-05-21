@@ -109,7 +109,7 @@ Using signed images with UEFI Capsule allows an OS-agnostic process to provide v
 This scenario assumes the factory-provisioned firmware and subsequent updates are signed with the same public/private keypair.
 
 
-+++?image=/assets/images/slides/Slide6.JPG
++++?image=/assets/images/slides/Slide6_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Why Capsule Update Needed]
@@ -125,6 +125,7 @@ This scenario assumes the factory-provisioned firmware and subsequent updates ar
 </ul>
 <br>
 <span style="font-size:0.9em" >Does not describe implementation – the    </span>
+<br>
 <br>
 <p align="right"><span style="font-size:0.5em"  >NIST:  <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">SP 800-147 .pdf</a></span></p>
 
@@ -539,6 +540,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide36.JPG
 @title[Verify CAPSULE_ENABLE Feature  ]
+<br>
 <p align="right"><span class="gold" >Verify `CAPSULE_ENABLE` Feature w/ Test Signing Keys</span></p>
 <div class="left">
      <ul>
