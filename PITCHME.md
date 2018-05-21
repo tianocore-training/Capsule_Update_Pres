@@ -86,7 +86,7 @@ When the UEFI Shell application, CapsuleAPP,  is invoked with a .CAP file image,
 <span style="font-size:0.8em" >National Institute of Standards and Technology (NIST) provides guidelines on BIOS update, 
 <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">[800-147]  </a></span><br>
 <ul>
- <li><span style="font-size:0.6em" >BIOS Update Authentication</span></li>
+<li><span style="font-size:0.6em" >BIOS Update Authentication</span></li>
 <li><span style="font-size:0.6em" >Secure Local Update Method </span></li>
 <li><span style="font-size:0.6em" >Integrity Protection</span></li>
 <li><span style="font-size:0.6em" >Non-Bypassabilitiy </span></li>
@@ -118,15 +118,14 @@ This scenario assumes the factory-provisioned firmware and subsequent updates ar
 <span style="font-size:0.8em" >National Institute of Standards and Technology (NIST) provides guidelines on BIOS update, 
 <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">[800-147]  </a></span><br>
 <ul>
-- <span style="font-size:0.6em" >BIOS Update Authentication</span>
-- <span style="font-size:0.6em" >Secure Local Update Method </span>
-- <span style="font-size:0.6em" >Integrity Protection</span>
-- <span style="font-size:0.6em" >Non-Bypassabilitiy </span>
+<li><span style="font-size:0.6em" >BIOS Update Authentication</span></li>
+<li><span style="font-size:0.6em" >Secure Local Update Method </span></li>
+<li><span style="font-size:0.6em" >Integrity Protection</span></li>
+<li><span style="font-size:0.6em" >Non-Bypassabilitiy </span></li>
 </ul>
 <br>
-<br>
-<br>
 <span style="font-size:0.9em" >Does not describe implementation – the    </span>
+<br>
 <p align="right"><span style="font-size:0.5em"  >NIST:  <a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf">SP 800-147 .pdf</a></span></p>
 
 Note:
