@@ -179,9 +179,9 @@ Note:
 <br>
 <p align="right"><span class="gold" >UEFI Spec defines Capsule Services to meet NIST Requirements</span></p>
 
-- <span style="font-size:0.8em"><b>EFI_FIRMWARE_MANAGEMENT_PROTOCOL</b>, (FMP) capsule format</span> |
-- <span style="font-size:0.8em"><b>EFI System Resource Table</b> (ESRT) to support system firmware and device firmware update </span> |
-- <span style="font-size:0.8em">An OS agent may call the UEFI service `UpdateCapsule()` to pass the capsule image from the OS to the firmware. Based upon the capsule flags, the firmware may process the capsule image immediately, or the firmware may reset the system and process the capsule image on the next boot </span> |
+- <span style="font-size:0.8em"><font color="yellow"><b>EFI_FIRMWARE_MANAGEMENT_PROTOCOL</b>, (FMP) </font> capsule format</span> |
+- <span style="font-size:0.8em"><font color="yellow"><b>EFI System Resource Table</b> (ESRT)</font> to support system firmware and device firmware update </span> |
+- <span style="font-size:0.8em">An OS agnostic UEFI service<font color="yellow"> `UpdateCapsule()`</font>  may be called to pass the capsule image from the OS to the firmware. Based upon the capsule flags, the firmware may process the capsule image immediately, or the firmware may reset the system and process the capsule image on the next boot </span> |
 
 
 Note:
