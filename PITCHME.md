@@ -373,7 +373,7 @@ Note:
 @title[Enable Capsule Based System Firmware Update]
 <p align="right"><span class="gold" >Enable Capsule Based System Firmware Update</span></p>
 <br>
-<span style="font-size:0.9em" >The following wiki pages provide details on how to add the system firmware update using Signed UEFI Capsules </span>
+<span style="font-size:0.9em" >The following wiki link pages provide details on how to add the system firmware update using Signed UEFI Capsules </span>
 <br>
 - <span style="font-size:0.8em" >Implement Platform Components for UEFI Capsule : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-Implementation">link</a> </span>
 - <span style="font-size:0.8em" >Add <font face="Courier New">CAPSULE_ENABLE</font> feature to Platform DSC/FDF Files : <a href="https://github.com/tianocore/tianocore.github.io/wiki/Capsule-Based-System-Firmware-Update-DSC-FDF">link</a></span>
