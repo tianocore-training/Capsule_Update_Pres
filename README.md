@@ -32,5 +32,5 @@
 # Capsule_Update_pres
 Capsule Update in Edk II platforms
 
-To see the Slides goto https://gitpitch.com/Laurie0131/Capsule_Update_pres/master#/
+To see the Slides goto https://gitpitch.com/tianocore-training/Capsule_Update_pres/master#/
 
